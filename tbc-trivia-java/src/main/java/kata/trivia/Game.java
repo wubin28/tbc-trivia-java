@@ -82,6 +82,7 @@ public class Game {
 
         } else {
 
+            // TODO: Duplicate code in method Game.roll()
             places[currentPlayer] = places[currentPlayer] + roll;
             if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
 
