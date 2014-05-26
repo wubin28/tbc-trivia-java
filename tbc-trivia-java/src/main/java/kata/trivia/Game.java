@@ -33,6 +33,7 @@ public class Game {
         return "Rock Question " + index;
     }
 
+    // TODO: Remove the unused method Game.isPlayable()
     public boolean isPlayable() {
         return (howManyPlayers() >= 2);
     }
