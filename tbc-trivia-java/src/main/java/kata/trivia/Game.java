@@ -23,11 +23,12 @@ public class Game {
             popQuestions.addLast("Pop Question " + i);
             scienceQuestions.addLast(("Science Question " + i));
             sportsQuestions.addLast(("Sports Question " + i));
-            // TODO: inline method Game.createRockQuestion()
+            // TODO: Inline method Game.createRockQuestion()
             rockQuestions.addLast(createRockQuestion(i));
         }
     }
 
+    // TODO: Change method Game.createRockQuestion() to be private
     public String createRockQuestion(int index) {
         return "Rock Question " + index;
     }
