@@ -130,6 +130,7 @@ public class Game {
                         + purses[currentPlayer]
                         + " Gold Coins.");
 
+                // TODO: Rename variable 'winner' to be 'isGameStillInProgress'.
                 boolean winner = didPlayerWin();
                 currentPlayer++;
                 if (currentPlayer == players.size()) currentPlayer = 0;
