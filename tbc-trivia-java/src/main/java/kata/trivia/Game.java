@@ -137,6 +137,7 @@ public class Game {
 
                 return winner;
             } else {
+                // TODO: Duplicate code in method Game.wasCorrectlyAnswered()
                 currentPlayer++;
                 if (currentPlayer == players.size()) currentPlayer = 0;
                 return true;
