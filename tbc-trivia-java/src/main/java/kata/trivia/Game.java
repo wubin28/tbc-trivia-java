@@ -17,7 +17,6 @@ public class Game {
     int currentPlayer = 0;
     boolean isGettingOutOfPenaltyBox;
 
-    // TODO-working-on: Check public interface of the server-side code to see how it is being used by the client-side code
     public Game() {
         for (int i = 0; i < 50; i++) {
             popQuestions.addLast("Pop Question " + i);
