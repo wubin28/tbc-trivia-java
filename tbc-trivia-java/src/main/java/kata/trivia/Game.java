@@ -137,7 +137,7 @@ public class Game {
 
                 return winner;
             } else {
-                // TODO: Duplicate code in method Game.wasCorrectlyAnswered()
+                // TODO: Duplicate code in method Game.wasCorrectlyAnswered(). Inner.
                 currentPlayer++;
                 if (currentPlayer == players.size()) currentPlayer = 0;
                 return true;
@@ -146,6 +146,7 @@ public class Game {
 
         } else {
 
+            // TODO: Duplicate code in method Game.wasCorrectlyAnswered(). Outer.
             System.out.println("Answer was corrent!!!!");
             purses[currentPlayer]++;
             System.out.println(players.get(currentPlayer)
