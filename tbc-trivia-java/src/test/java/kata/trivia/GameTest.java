@@ -4,13 +4,17 @@ package kata.trivia;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class GameTest {
 
     // TODO-working-on: Write characterization test
     @Test
-    public void testApp() {
-        assertEquals(5, 2 + 3);
+    public void what_if_method_wasCorrectlyAnswered_of_class_Game_is_called() {
+
+        // Assert
+        boolean isGameStillInProgress = game.wasCorrectlyAnswered();
+        assertTrue(isGameStillInProgress);
     }
 
     // TODO-acceptance-test: the game should be over if a player rolls the dice and answers each question correctly for 6 times
