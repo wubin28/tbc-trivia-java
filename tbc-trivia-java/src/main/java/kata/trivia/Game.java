@@ -59,6 +59,7 @@ public class Game {
         return players.size();
     }
 
+    // TODO: Rename the name of the parameter of method Game.roll() to be 'rollingNumber'
     public void roll(int roll) {
         System.out.println(players.get(currentPlayer) + " is the current player");
         System.out.println("They have rolled a " + roll);
