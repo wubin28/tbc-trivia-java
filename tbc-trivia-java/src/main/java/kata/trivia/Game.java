@@ -105,38 +105,28 @@ public class Game {
     public boolean wasCorrectlyAnswered() {
         if (inPenaltyBox[currentPlayer]) {
             if (isGettingOutOfPenaltyBox) {
-                System.out.println("Answer was correct!!!!");
-                purses[currentPlayer]++;
-                System.out.println(players.get(currentPlayer)
-                        + " now has "
-                        + purses[currentPlayer]
-                        + " Gold Coins.");
-
-                boolean isGameStillInProgress = didPlayerWin();
-                nextPlayer();
-
-                return isGameStillInProgress;
+                return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
             } else {
                 nextPlayer();
                 return true;
             }
-
-
         } else {
-
-            // TODO: Duplicate code in method Game.wasCorrectlyAnswered(). Outer.
-            System.out.println("Answer was correct!!!!");
-            purses[currentPlayer]++;
-            System.out.println(players.get(currentPlayer)
-                    + " now has "
-                    + purses[currentPlayer]
-                    + " Gold Coins.");
-
-            boolean isGameStillInProgress = didPlayerWin();
-            nextPlayer();
-
-            return isGameStillInProgress;
+            return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
         }
+    }
+
+    private boolean currentPlayerGetsAGoldCoinAndSelectNextPlayer() {
+        System.out.println("Answer was correct!!!!");
+        purses[currentPlayer]++;
+        System.out.println(players.get(currentPlayer)
+                + " now has "
+                + purses[currentPlayer]
+                + " Gold Coins.");
+
+        boolean isGameStillInProgress = didPlayerWin();
+        nextPlayer();
+
+        return isGameStillInProgress;
     }
 
     private void nextPlayer() {
