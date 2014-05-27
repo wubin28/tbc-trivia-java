@@ -3,7 +3,6 @@ package kata.trivia;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-// TODO-working-on: List acceptance tests as TODOs for class Game
 public class Game {
     // TODO: The fields of class Game should be private
     ArrayList players = new ArrayList();

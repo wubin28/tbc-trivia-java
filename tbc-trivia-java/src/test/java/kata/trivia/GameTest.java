@@ -6,9 +6,8 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
 public class GameTest {
-    /**
-     * Rigourous Test :-)
-     */
+
+    // TODO-working-on: Write characterization test
     @Test
     public void testApp() {
         assertEquals(5, 2 + 3);
