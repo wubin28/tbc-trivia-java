@@ -35,7 +35,7 @@ public class Game {
         purses[howManyPlayers()] = 0;
         inPenaltyBox[howManyPlayers()] = false;
 
-        // TODO: Replace System.out.println() with a log method of a logger
+        // TODO-later: Replace System.out.println() with a log method of a logger
         System.out.println(playerName + " was added");
         System.out.println("They are player number " + players.size());
         return true;
