@@ -2,7 +2,7 @@ package kata.trivia;
 
 import java.util.Random;
 
-// TODO-working-on: Read the client-side code - class GameRunner
+// TODO: Read the client-side code - class GameRunner
 public class GameRunner {
     private static boolean notAWinner;
 
