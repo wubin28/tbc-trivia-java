@@ -26,11 +26,6 @@ public class Game {
         }
     }
 
-    // TODO: Remove the unused method Game.isPlayable()
-    public boolean isPlayable() {
-        return (howManyPlayers() >= 2);
-    }
-
     // TODO: The return value of method Game.add() is not used.
     public boolean add(String playerName) {
 
