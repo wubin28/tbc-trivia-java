@@ -113,14 +113,11 @@ public class Game {
                         + " Gold Coins.");
 
                 boolean isGameStillInProgress = didPlayerWin();
-                currentPlayer++;
-                if (currentPlayer == players.size()) currentPlayer = 0;
+                nextPlayer();
 
                 return isGameStillInProgress;
             } else {
-                // TODO: Duplicate code in method Game.wasCorrectlyAnswered(). Inner.
-                currentPlayer++;
-                if (currentPlayer == players.size()) currentPlayer = 0;
+                nextPlayer();
                 return true;
             }
 
@@ -136,11 +133,15 @@ public class Game {
                     + " Gold Coins.");
 
             boolean isGameStillInProgress = didPlayerWin();
-            currentPlayer++;
-            if (currentPlayer == players.size()) currentPlayer = 0;
+            nextPlayer();
 
             return isGameStillInProgress;
         }
+    }
+
+    private void nextPlayer() {
+        currentPlayer++;
+        if (currentPlayer == players.size()) currentPlayer = 0;
     }
 
     public boolean wrongAnswer() {
@@ -148,8 +149,7 @@ public class Game {
         System.out.println(players.get(currentPlayer) + " was sent to the penalty box");
         inPenaltyBox[currentPlayer] = true;
 
-        currentPlayer++;
-        if (currentPlayer == players.size()) currentPlayer = 0;
+        nextPlayer();
         // TODO: The return value of method Game.wrongAnswer() is unnecessary and should be eliminated
         return true;
     }
