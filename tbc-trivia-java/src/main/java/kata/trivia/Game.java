@@ -5,6 +5,7 @@ import java.util.LinkedList;
 
 // TODO-working-on: List acceptance tests as TODOs for class Game
 public class Game {
+    // TODO: The fields of class Game should be private
     ArrayList players = new ArrayList();
     int[] places = new int[6];
     int[] purses = new int[6];
