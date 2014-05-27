@@ -45,17 +45,16 @@ public class Game {
         return players.size();
     }
 
-    // TODO: Rename the name of the parameter of method Game.roll() to be 'rollingNumber'
-    public void roll(int roll) {
+    public void roll(int rollingNumber) {
         System.out.println(players.get(currentPlayer) + " is the current player");
-        System.out.println("They have rolled a " + roll);
+        System.out.println("They have rolled a " + rollingNumber);
 
         if (inPenaltyBox[currentPlayer]) {
-            if (roll % 2 != 0) {
+            if (rollingNumber % 2 != 0) {
                 isGettingOutOfPenaltyBox = true;
 
                 System.out.println(players.get(currentPlayer) + " is getting out of the penalty box");
-                places[currentPlayer] = places[currentPlayer] + roll;
+                places[currentPlayer] = places[currentPlayer] + rollingNumber;
                 if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
 
                 System.out.println(players.get(currentPlayer)
@@ -71,7 +70,7 @@ public class Game {
         } else {
 
             // TODO: Duplicate code in method Game.roll()
-            places[currentPlayer] = places[currentPlayer] + roll;
+            places[currentPlayer] = places[currentPlayer] + rollingNumber;
             if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
 
             System.out.println(players.get(currentPlayer)
