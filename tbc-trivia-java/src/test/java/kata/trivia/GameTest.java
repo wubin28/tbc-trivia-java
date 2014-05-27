@@ -4,16 +4,23 @@ package kata.trivia;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class GameTest {
 
-    // TODO-working-on: Write characterization test
     @Test
     public void what_if_method_wasCorrectlyAnswered_of_class_Game_is_called() {
 
-        // Assert
+        // Arrange
+        Game game = new Game();
+        game.add("Chet");
+
+        // Act
+        game.roll(1);
         boolean isGameStillInProgress = game.wasCorrectlyAnswered();
+
+        // Assert
         assertTrue(isGameStillInProgress);
     }
 
