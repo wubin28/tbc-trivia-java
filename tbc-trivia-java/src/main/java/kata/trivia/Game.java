@@ -112,12 +112,11 @@ public class Game {
                         + purses[currentPlayer]
                         + " Gold Coins.");
 
-                // TODO: Rename variable 'winner' to be 'isGameStillInProgress'.
-                boolean winner = didPlayerWin();
+                boolean isGameStillInProgress = didPlayerWin();
                 currentPlayer++;
                 if (currentPlayer == players.size()) currentPlayer = 0;
 
-                return winner;
+                return isGameStillInProgress;
             } else {
                 // TODO: Duplicate code in method Game.wasCorrectlyAnswered(). Inner.
                 currentPlayer++;
@@ -136,11 +135,11 @@ public class Game {
                     + purses[currentPlayer]
                     + " Gold Coins.");
 
-            boolean winner = didPlayerWin();
+            boolean isGameStillInProgress = didPlayerWin();
             currentPlayer++;
             if (currentPlayer == players.size()) currentPlayer = 0;
 
-            return winner;
+            return isGameStillInProgress;
         }
     }
 
