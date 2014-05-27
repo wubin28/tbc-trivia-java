@@ -54,32 +54,27 @@ public class Game {
                 isGettingOutOfPenaltyBox = true;
 
                 System.out.println(players.get(currentPlayer) + " is getting out of the penalty box");
-                places[currentPlayer] = places[currentPlayer] + rollingNumber;
-                if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
-
-                System.out.println(players.get(currentPlayer)
-                        + "'s new location is "
-                        + places[currentPlayer]);
-                System.out.println("The category is " + currentCategory());
-                askQuestion();
+                currentPlayerMovesToNewPlaceAndAnswersAQuestion(rollingNumber);
             } else {
                 System.out.println(players.get(currentPlayer) + " is not getting out of the penalty box");
                 isGettingOutOfPenaltyBox = false;
             }
 
         } else {
-
-            // TODO: Duplicate code in method Game.roll()
-            places[currentPlayer] = places[currentPlayer] + rollingNumber;
-            if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
-
-            System.out.println(players.get(currentPlayer)
-                    + "'s new location is "
-                    + places[currentPlayer]);
-            System.out.println("The category is " + currentCategory());
-            askQuestion();
+            currentPlayerMovesToNewPlaceAndAnswersAQuestion(rollingNumber);
         }
 
+    }
+
+    private void currentPlayerMovesToNewPlaceAndAnswersAQuestion(int rollingNumber) {
+        places[currentPlayer] = places[currentPlayer] + rollingNumber;
+        if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
+
+        System.out.println(players.get(currentPlayer)
+                + "'s new location is "
+                + places[currentPlayer]);
+        System.out.println("The category is " + currentCategory());
+        askQuestion();
     }
 
     private void askQuestion() {
