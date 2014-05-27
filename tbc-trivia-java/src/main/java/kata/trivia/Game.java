@@ -123,7 +123,7 @@ public class Game {
                 + purses[currentPlayer]
                 + " Gold Coins.");
 
-        boolean isGameStillInProgress = didPlayerWin();
+        boolean isGameStillInProgress = isGameStillInProgress();
         nextPlayer();
 
         return isGameStillInProgress;
@@ -140,13 +140,11 @@ public class Game {
         inPenaltyBox[currentPlayer] = true;
 
         nextPlayer();
-        // TODO: The return value of method Game.wrongAnswer() is unnecessary and should be eliminated
+        // TODO-later: The return value of method Game.wrongAnswer() is unnecessary and should be eliminated
         return true;
     }
 
-
-    // TODO: The name of the method Game.didPlayerWin() should be Game.isGameStillInProgress()
-    private boolean didPlayerWin() {
+    private boolean isGameStillInProgress() {
         return !(purses[currentPlayer] == 6);
     }
 }
