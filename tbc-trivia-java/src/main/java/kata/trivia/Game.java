@@ -89,13 +89,13 @@ public class Game {
 
     private void askQuestion() {
         if (currentCategory() == "Pop")
-            logger.info(popQuestions.removeFirst().toString());
+            logger.info(questionMaker.removeFirstPopQuestion());
         if (currentCategory() == "Science")
-            logger.info(scienceQuestions.removeFirst().toString());
+            logger.info(questionMaker.removeFirstScienceQuestion());
         if (currentCategory() == "Sports")
-            logger.info(sportsQuestions.removeFirst().toString());
+            logger.info(questionMaker.removeFirstSportsQuestion());
         if (currentCategory() == "Rock")
-            logger.info(rockQuestions.removeFirst().toString());
+            logger.info(questionMaker.removeFirstRockQuestion());
     }
 
 
