@@ -95,8 +95,8 @@ public class Game {
     }
 
     public boolean wasCorrectlyAnswered() {
-        if (inPenaltyBox[currentPlayer]) {
-            if (isGettingOutOfPenaltyBox) {
+        if (inPenaltyBox[currentPlayer] || players.get(currentPlayer).isInPenaltyBox()) {
+            if (isGettingOutOfPenaltyBox || players.get(currentPlayer).isGettingOutOfPenaltyBox()) {
                 return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
             } else {
                 nextPlayer();
