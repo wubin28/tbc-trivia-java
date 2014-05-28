@@ -13,10 +13,8 @@ public class Game {
     private ArrayList<Player> players = new ArrayList<Player>();
 
     // TODO-working-on: Move inPenaltyBox into class Player
-    private boolean[] inPenaltyBox = new boolean[6];
 
     private int currentPlayer = 0;
-    private boolean isGettingOutOfPenaltyBox;
 
     private static Logger logger = Logger.getLogger("kata.trivia.Game");
     private static FileHandler fileHandler = null;
