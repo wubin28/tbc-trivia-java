@@ -95,20 +95,6 @@ public class Game {
             logger.info(questionMaker.removeFirstRockQuestion());
     }
 
-    // TODO-working-on: Move method Game.currentCategory() to class Player
-    private String currentCategory() {
-        if (players.get(currentPlayer).getPlace() == 0) return "Pop";
-        if (players.get(currentPlayer).getPlace() == 4) return "Pop";
-        if (players.get(currentPlayer).getPlace() == 8) return "Pop";
-        if (players.get(currentPlayer).getPlace() == 1) return "Science";
-        if (players.get(currentPlayer).getPlace() == 5) return "Science";
-        if (players.get(currentPlayer).getPlace() == 9) return "Science";
-        if (players.get(currentPlayer).getPlace() == 2) return "Sports";
-        if (players.get(currentPlayer).getPlace() == 6) return "Sports";
-        if (players.get(currentPlayer).getPlace() == 10) return "Sports";
-        return "Rock";
-    }
-
     public boolean wasCorrectlyAnswered() {
         if (inPenaltyBox[currentPlayer]) {
             if (isGettingOutOfPenaltyBox) {
