@@ -9,11 +9,17 @@ import java.util.logging.SimpleFormatter;
 
 public class Game {
     private final QuestionMaker questionMaker = new QuestionMaker();
-    // TODO: Move playerName, places, purses and inPenaltyBox to a new class Player
+
     // TODO: Make player list type-safe
     private ArrayList players = new ArrayList();
+
+    // TODO: Move places into class Player
     private int[] places = new int[6];
+
+    // TODO: Move purses into class Player
     private int[] purses = new int[6];
+
+    // TODO: Move inPenaltyBox into class Player
     private boolean[] inPenaltyBox = new boolean[6];
 
     private int currentPlayer = 0;
@@ -41,7 +47,7 @@ public class Game {
 
     public void add(String playerName) {
 
-
+        // TODO: Move playerName into class Player
         players.add(playerName);
         places[howManyPlayers()] = 0;
         purses[howManyPlayers()] = 0;
