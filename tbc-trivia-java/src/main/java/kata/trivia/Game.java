@@ -86,6 +86,9 @@ public class Game {
         logger.info(players.get(currentPlayer)
                 + "'s new location is "
                 + places[currentPlayer]);
+        logger.info(players.get(currentPlayer)
+                + "'s new location is "
+                + players.get(currentPlayer).getPlace());
         logger.info("The category is " + currentCategory());
         askQuestion();
     }
