@@ -12,4 +12,19 @@ public class QuestionMaker {
     private LinkedList sportsQuestions = new LinkedList();
     private LinkedList rockQuestions = new LinkedList();
 
+    public void addPopQuestion(String popQuestion) {
+        popQuestions.add(popQuestion);
+    }
+
+    public void addScienceQuestion(String scienceQuestion) {
+        scienceQuestions.add(scienceQuestion);
+    }
+
+    public void addSportsQuestion(String sportsQuestion) {
+        sportsQuestions.add(sportsQuestion);
+    }
+
+    public void addRockQuestion(String rockQuestion) {
+        rockQuestions.add(rockQuestion);
+    }
 }
