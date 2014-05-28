@@ -78,10 +78,10 @@ public class Game {
     }
 
     private void currentPlayerMovesToNewPlaceAndAnswersAQuestion(int rollingNumber) {
-        places[currentPlayer] = places[currentPlayer] + rollingNumber;
+        places[currentPlayer] += rollingNumber;
         players.get(currentPlayer).moveForwardSteps(rollingNumber);
 
-        if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
+        if (places[currentPlayer] > 11) places[currentPlayer] -= 12;
 
         logger.info(players.get(currentPlayer)
                 + "'s new location is "
