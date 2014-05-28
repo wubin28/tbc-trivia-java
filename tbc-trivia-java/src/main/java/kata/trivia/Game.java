@@ -19,6 +19,7 @@ public class Game {
 
     public Game() {
         try {
+            // TODO: Magic number 10000000
             fileHandler = new FileHandler("%h/Game-logging.log", 10000000, 1, true);
             fileHandler.setFormatter(new SimpleFormatter());
         } catch (IOException e) {
@@ -26,6 +27,7 @@ public class Game {
         }
         logger.addHandler(fileHandler);
 
+        // TODO: Magic number 50
         for (int i = 0; i < 50; i++) {
             questionMaker.addPopQuestion("Pop Question " + i);
             questionMaker.addScienceQuestion(("Science Question " + i));
@@ -51,6 +53,7 @@ public class Game {
         logger.info("They have rolled a " + rollingNumber);
 
         if (players.get(currentPlayer).isInPenaltyBox()) {
+            // TODO: Introduce explaining variable isRollingNumberOdd
             if (rollingNumber % 2 != 0) {
                 players.get(currentPlayer).getOutOfPenaltyBox();
 
