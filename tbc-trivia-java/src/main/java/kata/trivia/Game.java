@@ -117,6 +117,10 @@ public class Game {
                 + " now has "
                 + purses[currentPlayer]
                 + " Gold Coins.");
+        logger.info(players.get(currentPlayer)
+                + " now has "
+                + players.get(currentPlayer).countGoldCoins()
+                + " Gold Coins.");
 
         boolean isGameStillInProgress = isGameStillInProgress();
         nextPlayer();
