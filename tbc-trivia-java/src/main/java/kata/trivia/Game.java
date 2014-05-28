@@ -12,8 +12,6 @@ public class Game {
 
     private ArrayList<Player> players = new ArrayList<Player>();
 
-    // TODO-working-on: Move places into class Player
-
     // TODO: Move purses into class Player
     private int[] purses = new int[6];
 
@@ -77,14 +75,8 @@ public class Game {
     }
 
     private void currentPlayerMovesToNewPlaceAndAnswersAQuestion(int rollingNumber) {
-        places[currentPlayer] += rollingNumber;
-        if (places[currentPlayer] > 11) places[currentPlayer] -= 12;
-
         players.get(currentPlayer).moveForwardSteps(rollingNumber);
 
-        logger.info(players.get(currentPlayer)
-                + "'s new location is "
-                + places[currentPlayer]);
         logger.info(players.get(currentPlayer)
                 + "'s new location is "
                 + players.get(currentPlayer).getPlace());
