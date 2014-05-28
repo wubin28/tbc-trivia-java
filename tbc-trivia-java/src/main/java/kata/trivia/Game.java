@@ -65,7 +65,7 @@ public class Game {
                 currentPlayerMovesToNewPlaceAndAnswersAQuestion(rollingNumber);
             } else {
                 logger.info(players.get(currentPlayer) + " is not getting out of the penalty box");
-                players.get(currentPlayer).stayInPenaltyBox();
+                players.get(currentPlayer).sentToPenaltyBox();
             }
 
         } else {
@@ -97,15 +97,10 @@ public class Game {
 
     public boolean wasCorrectlyAnswered() {
         if (players.get(currentPlayer).isInPenaltyBox()) {
-            if (players.get(currentPlayer).isGettingOutOfPenaltyBox()) {
-                return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
-            } else {
-                nextPlayer();
-                return true;
-            }
-        } else {
-            return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
+            nextPlayer();
+            return true;
         }
+        return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
     }
 
     private boolean currentPlayerGetsAGoldCoinAndSelectNextPlayer() {
