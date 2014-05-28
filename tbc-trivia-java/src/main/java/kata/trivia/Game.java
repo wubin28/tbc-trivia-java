@@ -145,6 +145,6 @@ public class Game {
 
     // TODO: The magic number 6
     private boolean isGameStillInProgress() {
-        return !(purses[currentPlayer] == 6);
+        return !(players.get(currentPlayer).countGoldCoins() == 6);
     }
 }
