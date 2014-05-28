@@ -7,6 +7,7 @@ public class Player {
     private String playerName;
     private int place = 0;
     private int sumOfGoldCoins = 0;
+    private boolean isInPenaltyBox = false;
 
     public Player(String playerName) {
         this.playerName = playerName;
@@ -45,5 +46,9 @@ public class Player {
 
     public int countGoldCoins() {
         return this.sumOfGoldCoins;
+    }
+
+    public boolean isInPenaltyBox() {
+        return this.isInPenaltyBox;
     }
 }
