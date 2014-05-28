@@ -8,6 +8,10 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
 public class Game {
+    public static final int NUMBER_OF_GOLD_COINS_TO_WON_AND_GAME_OVER = 6;
+    public static final int MAX_NUMBER_OF_BYTES_WRITING_TO_ONE_FILE = 10000000;
+    public static final int NUMBER_OF_FILES_TO_USE = 1;
+    public static final int MAX_NUMBER_OF_QUESTIONS = 50;
     private final QuestionMaker questionMaker = new QuestionMaker();
 
     private ArrayList<Player> players = new ArrayList<Player>();
@@ -19,16 +23,16 @@ public class Game {
 
     public Game() {
         try {
-            // TODO: Magic number 10000000
-            fileHandler = new FileHandler("%h/Game-logging.log", 10000000, 1, true);
+            fileHandler = new FileHandler("%h/Game-logging.log"
+                    , MAX_NUMBER_OF_BYTES_WRITING_TO_ONE_FILE
+                    , NUMBER_OF_FILES_TO_USE, true);
             fileHandler.setFormatter(new SimpleFormatter());
         } catch (IOException e) {
             e.printStackTrace();
         }
         logger.addHandler(fileHandler);
 
-        // TODO: Magic number 50
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < MAX_NUMBER_OF_QUESTIONS; i++) {
             questionMaker.addPopQuestion("Pop Question " + i);
             questionMaker.addScienceQuestion(("Science Question " + i));
             questionMaker.addSportsQuestion(("Sports Question " + i));
@@ -134,8 +138,7 @@ public class Game {
         return true;
     }
 
-    // TODO: The magic number 6
     private boolean isGameStillInProgress() {
-        return !(players.get(currentPlayer).countGoldCoins() == 6);
+        return !(players.get(currentPlayer).countGoldCoins() == NUMBER_OF_GOLD_COINS_TO_WON_AND_GAME_OVER);
     }
 }
