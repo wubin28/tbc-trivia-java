@@ -47,8 +47,8 @@ public class Game {
 
     public void add(String playerName) {
 
-        // TODO: Move playerName into class Player
-        players.add(playerName);
+        // TODO-working-on: Move playerName into class Player
+        players.add(new Player(playerName));
         places[howManyPlayers()] = 0;
         purses[howManyPlayers()] = 0;
         inPenaltyBox[howManyPlayers()] = false;
