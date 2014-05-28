@@ -80,18 +80,18 @@ public class Game {
         logger.info(players.get(currentPlayer)
                 + "'s new location is "
                 + players.get(currentPlayer).getPlace());
-        logger.info("The category is " + currentCategory());
+        logger.info("The category is " + players.get(currentPlayer).getCurrentCategory());
         askQuestion();
     }
 
     private void askQuestion() {
-        if (currentCategory() == "Pop")
+        if (players.get(currentPlayer).getCurrentCategory() == "Pop")
             logger.info(questionMaker.removeFirstPopQuestion());
-        if (currentCategory() == "Science")
+        if (players.get(currentPlayer).getCurrentCategory() == "Science")
             logger.info(questionMaker.removeFirstScienceQuestion());
-        if (currentCategory() == "Sports")
+        if (players.get(currentPlayer).getCurrentCategory() == "Sports")
             logger.info(questionMaker.removeFirstSportsQuestion());
-        if (currentCategory() == "Rock")
+        if (players.get(currentPlayer).getCurrentCategory() == "Rock")
             logger.info(questionMaker.removeFirstRockQuestion());
     }
 
