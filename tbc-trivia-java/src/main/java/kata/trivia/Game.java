@@ -53,7 +53,7 @@ public class Game {
         logger.info("They have rolled a " + rollingNumber);
 
         if (players.get(currentPlayer).isInPenaltyBox()) {
-            // TODO: Introduce explaining variable isRollingNumberOdd
+            // TODO-working-on: Introduce explaining variable isRollingNumberOdd
             if (rollingNumber % 2 != 0) {
                 players.get(currentPlayer).getOutOfPenaltyBox();
 
