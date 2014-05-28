@@ -30,10 +30,10 @@ public class Game {
         logger.addHandler(fileHandler);
 
         for (int i = 0; i < 50; i++) {
-            popQuestions.addLast("Pop Question " + i);
-            scienceQuestions.addLast(("Science Question " + i));
-            sportsQuestions.addLast(("Sports Question " + i));
-            rockQuestions.addLast("Rock Question " + i);
+            questionMaker.addPopQuestion("Pop Question " + i);
+            questionMaker.addScienceQuestion(("Science Question " + i));
+            questionMaker.addSportsQuestion(("Sports Question " + i));
+            questionMaker.addRockQuestion("Rock Question " + i);
         }
     }
 
