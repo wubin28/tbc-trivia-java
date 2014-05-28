@@ -14,4 +14,8 @@ public class Player {
     public String toString() {
         return this.playerName;
     }
+
+    public void moveForwardSteps(int steps) {
+
+    }
 }
