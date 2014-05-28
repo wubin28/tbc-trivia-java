@@ -53,8 +53,8 @@ public class Game {
         logger.info("They have rolled a " + rollingNumber);
 
         if (players.get(currentPlayer).isInPenaltyBox()) {
-            // TODO-working-on: Introduce explaining variable isRollingNumberOdd
-            if (rollingNumber % 2 != 0) {
+            boolean isRollingNumberOdd = rollingNumber % 2 != 0;
+            if (isRollingNumberOdd) {
                 players.get(currentPlayer).getOutOfPenaltyBox();
 
                 logger.info(players.get(currentPlayer) + " is getting out of the penalty box");
