@@ -12,7 +12,7 @@ public class Game {
 
     private ArrayList<Player> players = new ArrayList<Player>();
 
-    // TODO: Move inPenaltyBox into class Player
+    // TODO-working-on: Move inPenaltyBox into class Player
     private boolean[] inPenaltyBox = new boolean[6];
 
     private int currentPlayer = 0;
