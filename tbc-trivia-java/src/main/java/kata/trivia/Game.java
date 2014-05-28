@@ -14,12 +14,6 @@ public class Game {
     private int[] purses = new int[6];
     private boolean[] inPenaltyBox = new boolean[6];
 
-    // TODO-working-on: Move question lists to a new class QuestionMaker
-    private LinkedList popQuestions = new LinkedList();
-    private LinkedList scienceQuestions = new LinkedList();
-    private LinkedList sportsQuestions = new LinkedList();
-    private LinkedList rockQuestions = new LinkedList();
-
     private int currentPlayer = 0;
     private boolean isGettingOutOfPenaltyBox;
 
