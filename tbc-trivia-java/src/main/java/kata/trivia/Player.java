@@ -20,4 +20,8 @@ public class Player {
         this.place += steps;
         if (this.place > 11) this.place -= 12;
     }
+
+    public int getPlace() {
+        return this.place;
+    }
 }
