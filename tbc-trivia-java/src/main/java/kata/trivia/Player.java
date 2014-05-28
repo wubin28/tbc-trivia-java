@@ -8,6 +8,7 @@ public class Player {
     private int place = 0;
     private int sumOfGoldCoins = 0;
     private boolean isInPenaltyBox = false;
+    // TODO: Eliminate field Play.isGettingOutOfPenaltyBox
     private boolean isGettingOutOfPenaltyBox = true;
 
     public Player(String playerName) {
