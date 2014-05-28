@@ -46,14 +46,13 @@ public class Game {
 
     public void add(String playerName) {
 
-        // TODO-working-on: Move playerName into class Player
         players.add(new Player(playerName));
         places[howManyPlayers()] = 0;
         purses[howManyPlayers()] = 0;
         inPenaltyBox[howManyPlayers()] = false;
 
         logger.info(playerName + " was added");
-        // TODO: The logging message should be 'The total amount of players is xx'
+        // TODO-working-on: The logging message should be 'The total amount of players is xx'
         logger.info("They are player number " + players.size());
     }
 
