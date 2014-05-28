@@ -13,7 +13,6 @@ public class Game {
     private ArrayList<Player> players = new ArrayList<Player>();
 
     // TODO-working-on: Move places into class Player
-    private int[] places = new int[6];
 
     // TODO: Move purses into class Player
     private int[] purses = new int[6];
