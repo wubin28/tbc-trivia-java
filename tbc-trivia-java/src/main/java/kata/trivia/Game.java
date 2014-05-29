@@ -54,10 +54,6 @@ public class Game {
         logger.info("The total amount of players is " + players.size());
     }
 
-    private int howManyPlayers() {
-        return players.size();
-    }
-
     public void roll(int rollingNumber) {
         logger.info(players.get(currentPlayer) + " is the current player");
         logger.info("They have rolled a " + rollingNumber);
