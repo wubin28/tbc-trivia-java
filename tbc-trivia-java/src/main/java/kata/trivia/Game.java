@@ -100,7 +100,8 @@ public class Game {
     public boolean wasCorrectlyAnswered() {
         if (players.get(currentPlayer).isInPenaltyBox()) {
             nextPlayer();
-            return true;
+            boolean theGameIsStillInProgress = true;
+            return theGameIsStillInProgress;
         }
         return currentPlayerGetsAGoldCoinAndSelectNextPlayer();
     }
