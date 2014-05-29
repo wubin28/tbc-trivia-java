@@ -151,19 +151,21 @@ public class GameTest {
     public void the_category_should_be_Pop_if_the_player_moves_12_or_4_or_8_steps() {
         // Arrange
         Player player = new Player("Ben");
+        String category = "Pop";
 
         // Act, Assert
         player.moveForwardSteps(12);
-        assertEquals("Pop", player.getCurrentCategory());
+        assertEquals(category, player.getCurrentCategory());
 
         player.moveForwardSteps(4);
-        assertEquals("Pop", player.getCurrentCategory());
+        assertEquals(category, player.getCurrentCategory());
 
         player.moveForwardSteps(8);
-        assertEquals("Pop", player.getCurrentCategory());
+        assertEquals(category, player.getCurrentCategory());
     }
 
     // TODO: the category should be Science if the player moves 1, 5 or 9 steps
+
     // TODO: the category should be Sports if the player moves 2, 6 or 10 steps
     // TODO: the category should be Rock if the player moves 3, 7 or 11 steps
 }
