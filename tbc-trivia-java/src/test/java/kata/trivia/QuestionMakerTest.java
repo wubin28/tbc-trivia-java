@@ -1,5 +1,6 @@
 package kata.trivia;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -8,11 +9,16 @@ import static org.junit.Assert.assertEquals;
  * Created by benwu on 14-5-29.
  */
 public class QuestionMakerTest {
+    private QuestionMaker questionMaker = null;
+
+    @Before
+    public void initialize() {
+        // Arrange
+        questionMaker = new QuestionMaker();
+    }
+
     @Test
     public void add_two_pop_questions_and_could_remove_the_first_one() {
-        // Arrange
-        QuestionMaker questionMaker = new QuestionMaker();
-
         // Act
         questionMaker.addPopQuestion("Pop Question 1");
         questionMaker.addPopQuestion("Pop Question 2");
@@ -23,9 +29,6 @@ public class QuestionMakerTest {
 
     @Test
     public void add_two_science_questions_and_could_remove_the_first_one() {
-        // Arrange
-        QuestionMaker questionMaker = new QuestionMaker();
-
         // Act
         questionMaker.addScienceQuestion("Science Question 1");
         questionMaker.addScienceQuestion("Science Question 2");
@@ -36,9 +39,6 @@ public class QuestionMakerTest {
 
     @Test
     public void add_two_sports_questions_and_could_remove_the_first_one() {
-        // Arrange
-        QuestionMaker questionMaker = new QuestionMaker();
-
         // Act
         questionMaker.addSportsQuestion("Sports Question 1");
         questionMaker.addSportsQuestion("Sports Question 2");
@@ -49,9 +49,6 @@ public class QuestionMakerTest {
 
     @Test
     public void add_two_rock_questions_and_could_remove_the_first_one() {
-        // Arrange
-        QuestionMaker questionMaker = new QuestionMaker();
-
         // Act
         questionMaker.addRockQuestion("Rock Question 1");
         questionMaker.addRockQuestion("Rock Question 2");
