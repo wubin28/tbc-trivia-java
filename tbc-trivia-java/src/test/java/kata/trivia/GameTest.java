@@ -126,6 +126,12 @@ public class GameTest {
     // TODO-working-on: the place should be 1 if the player moves forward 1 step
     @Test
     public void the_place_should_be_1_if_the_player_moves_forward_1_step() {
+        // Arrange
+        Player player = new Player("Ben");
+
+        // Act
+        player.moveForwardSteps(1);
+
         // Assert
         assertEquals(1, player.getPlace());
     }
