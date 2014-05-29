@@ -14,6 +14,10 @@ public class Player {
     public static final int CATEGORY_SPORTS_1 = 2;
     public static final int CATEGORY_SPORTS_2 = 6;
     public static final int CATEGORY_SPORTS_3 = 10;
+    public static final String POP = "Pop";
+    public static final String SCIENCE = "Science";
+    public static final String SPORTS = "Sports";
+    public static final String ROCK = "Rock";
     private String playerName;
     private int place = 0;
     private int sumOfGoldCoins = 0;
@@ -38,16 +42,16 @@ public class Player {
     }
 
     public String getCurrentCategory() {
-        if (this.place == CATEGORY_POP_1) return "Pop";
-        if (this.place == CATEGORY_POP_2) return "Pop";
-        if (this.place == CATEGORY_POP_3) return "Pop";
-        if (this.place == CATEGORY_SCIENCE_1) return "Science";
-        if (this.place == CATEGORY_SCIENCE_2) return "Science";
-        if (this.place == CATEGORY_SCIENCE_3) return "Science";
-        if (this.place == CATEGORY_SPORTS_1) return "Sports";
-        if (this.place == CATEGORY_SPORTS_2) return "Sports";
-        if (this.place == CATEGORY_SPORTS_3) return "Sports";
-        return "Rock";
+        if (this.place == CATEGORY_POP_1) return POP;
+        if (this.place == CATEGORY_POP_2) return POP;
+        if (this.place == CATEGORY_POP_3) return POP;
+        if (this.place == CATEGORY_SCIENCE_1) return SCIENCE;
+        if (this.place == CATEGORY_SCIENCE_2) return SCIENCE;
+        if (this.place == CATEGORY_SCIENCE_3) return SCIENCE;
+        if (this.place == CATEGORY_SPORTS_1) return SPORTS;
+        if (this.place == CATEGORY_SPORTS_2) return SPORTS;
+        if (this.place == CATEGORY_SPORTS_3) return SPORTS;
+        return ROCK;
     }
 
     public void winAGoldCoin() {
