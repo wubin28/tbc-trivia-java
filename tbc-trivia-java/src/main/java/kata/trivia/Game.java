@@ -86,6 +86,7 @@ public class Game {
             logger.info(questionMaker.removeFirstRockQuestion());
     }
 
+    // TODO-later: The name of method Game.wasCorrectlyAnswered() should be Game.answeredCorrectly()
     public boolean wasCorrectlyAnswered() {
         if (players.get(currentPlayer).isInPenaltyBox()) {
             nextPlayer();
@@ -115,6 +116,7 @@ public class Game {
         if (currentPlayer == players.size()) currentPlayer = 0;
     }
 
+    // TODO-later: The name of method Game.wrongAnswer() should be Game.answeredWrong()
     public boolean wrongAnswer() {
         logger.info("Question was incorrectly answered");
         logger.info(players.get(currentPlayer) + " was sent to the penalty box");
