@@ -132,8 +132,8 @@ public class Game {
         players.get(currentPlayer).sentToPenaltyBox();
 
         nextPlayer();
-        // TODO-later: The return value of method Game.wrongAnswer() is unnecessary and should be eliminated
-        return true;
+        boolean theGameIsStillInProgress = true;
+        return theGameIsStillInProgress;
     }
 
     private boolean isGameStillInProgress() {
