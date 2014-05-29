@@ -24,7 +24,6 @@ public class QuestionMakerTest {
     @Test
     public void add_two_pop_questions_and_could_remove_the_first_one() {
         // Act
-        // TODO: Extract variable
         questionMaker.addPopQuestion(POP_QUESTION_1);
         questionMaker.addPopQuestion("Pop Question 2");
 
