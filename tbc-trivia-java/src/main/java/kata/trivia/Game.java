@@ -21,6 +21,20 @@ public class Game {
     private static FileHandler fileHandler = null;
 
     public Game() {
+        logToAFile();
+        prepareQuestions();
+    }
+
+    private void prepareQuestions() {
+        for (int i = 0; i < MAX_NUMBER_OF_QUESTIONS; i++) {
+            questionMaker.addPopQuestion("Pop Question " + i);
+            questionMaker.addScienceQuestion(("Science Question " + i));
+            questionMaker.addSportsQuestion(("Sports Question " + i));
+            questionMaker.addRockQuestion("Rock Question " + i);
+        }
+    }
+
+    private void logToAFile() {
         try {
             fileHandler = new FileHandler("%h/Game-logging.log"
                     , MAX_NUMBER_OF_BYTES_WRITING_TO_ONE_FILE
@@ -30,13 +44,6 @@ public class Game {
             e.printStackTrace();
         }
         logger.addHandler(fileHandler);
-
-        for (int i = 0; i < MAX_NUMBER_OF_QUESTIONS; i++) {
-            questionMaker.addPopQuestion("Pop Question " + i);
-            questionMaker.addScienceQuestion(("Science Question " + i));
-            questionMaker.addSportsQuestion(("Sports Question " + i));
-            questionMaker.addRockQuestion("Rock Question " + i);
-        }
     }
 
     public void add(String playerName) {
