@@ -147,10 +147,19 @@ public class GameTest {
         assertEquals(0, player.getPlace());
     }
 
-    // TODO-working-on: the category should be Pop if the player moves 12, 4 or 8 steps
     @Test
     public void the_category_should_be_Pop_if_the_player_moves_12_or_4_or_8_steps() {
-        // Assert
+        // Arrange
+        Player player = new Player("Ben");
+
+        // Act, Assert
+        player.moveForwardSteps(12);
+        assertEquals("Pop", player.getCurrentCategory());
+
+        player.moveForwardSteps(4);
+        assertEquals("Pop", player.getCurrentCategory());
+
+        player.moveForwardSteps(8);
         assertEquals("Pop", player.getCurrentCategory());
     }
 
