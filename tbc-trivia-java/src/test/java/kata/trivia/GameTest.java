@@ -135,9 +135,14 @@ public class GameTest {
         assertEquals(1, player.getPlace());
     }
 
-    // TODO-working-on: the place should be 0 if the player moves forward 12 steps
     @Test
     public void the_place_should_be_0_if_the_player_moves_forward_12_steps() {
+        // Arrange
+        Player player = new Player("Ben");
+
+        // Act
+        player.moveForwardSteps(12);
+
         // Assert
         assertEquals(0, player.getPlace());
     }
