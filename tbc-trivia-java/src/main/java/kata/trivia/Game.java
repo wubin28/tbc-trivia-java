@@ -10,7 +10,6 @@ public class Game {
     public static final int NUMBER_OF_GOLD_COINS_TO_WON_AND_GAME_OVER = 6;
     public static final int MAX_NUMBER_OF_BYTES_WRITING_TO_ONE_FILE = 10000000;
     public static final int NUMBER_OF_FILES_TO_USE = 1;
-    public static final int MAX_NUMBER_OF_QUESTIONS = 50;
     private final QuestionMaker questionMaker = new QuestionMaker();
 
     private ArrayList<Player> players = new ArrayList<Player>();
@@ -22,16 +21,6 @@ public class Game {
 
     public Game() {
         logToAFile();
-        prepareQuestions();
-    }
-
-    private void prepareQuestions() {
-        for (int i = 0; i < MAX_NUMBER_OF_QUESTIONS; i++) {
-            questionMaker.addPopQuestion("Pop Question " + i);
-            questionMaker.addScienceQuestion(("Science Question " + i));
-            questionMaker.addSportsQuestion(("Sports Question " + i));
-            questionMaker.addRockQuestion("Rock Question " + i);
-        }
     }
 
     private void logToAFile() {
