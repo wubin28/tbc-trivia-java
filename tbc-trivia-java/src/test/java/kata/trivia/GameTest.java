@@ -123,7 +123,13 @@ public class GameTest {
         assertEquals("Rock Question 1", questionMaker.removeFirstRockQuestion());
     }
 
-    // TODO: the place should be 1 if the player moves forward 1 step
+    // TODO-working-on: the place should be 1 if the player moves forward 1 step
+    @Test
+    public void the_place_should_be_1_if_the_player_moves_forward_1_step() {
+        // Assert
+        assertEquals(1, player.getPlace());
+    }
+
     // TODO: the place should be 0 if the player moves forward 12 steps
 
     // TODO: the category should be Pop if the player moves 12, 4 or 8 steps
