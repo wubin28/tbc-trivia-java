@@ -32,11 +32,11 @@ public class GameTest {
     }
 
     @Test
-    public void the_game_should_be_over_if_a_player_rolls_the_dice_for_7_times_and_answers_the_question_wrongly_for_1_time_followed_by_an_odd_rolling_number_but_then_correctly_for_6_times() {
+    public void the_game_should_be_over_if_a_player_rolls_the_dice_for_7_times_and_answers_the_question_wrongly_for_1_time_followed_by_a_rolling_number_which_is_not_4_but_then_correctly_for_6_times() {
         // Act
         game.roll(1);
         game.wrongAnswer();
-        game.roll(1);
+        game.roll(6);
         game.wasCorrectlyAnswered();
         for (int i = 0; i < 5; i++) {
             game.roll(1);
@@ -48,11 +48,11 @@ public class GameTest {
     }
 
     @Test
-    public void the_game_should_be_over_if_a_player_rolls_the_dice_for_8_times_and_answers_the_question_wrongly_for_1_time_followed_by_an_even_rolling_number_but_then_correctly_for_7_times_with_odd_rolling_numbers() {
+    public void the_game_should_be_over_if_a_player_rolls_the_dice_for_8_times_and_answers_the_question_wrongly_for_1_time_followed_by_a_rolling_number_which_is_4_but_then_correctly_for_7_times_with_odd_rolling_numbers() {
         // Act
         game.roll(1);
         game.wrongAnswer();
-        game.roll(2);
+        game.roll(4);
         game.wasCorrectlyAnswered();
         for (int i = 0; i < 6; i++) {
             game.roll(1);
@@ -63,5 +63,6 @@ public class GameTest {
         assertFalse(isGameStillInProgress);
     }
 
-    // TODO-new-feature: The player will not be getting out of the penalty box only when the rolling number is 4
+    // TODO-new-feature-working-on: The player will not be getting out of the penalty box only when the rolling number is 4
+
 }
