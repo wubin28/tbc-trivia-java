@@ -62,7 +62,4 @@ public class GameTest {
         // Assert
         assertFalse(isGameStillInProgress);
     }
-
-    // TODO-new-feature-working-on: The player will not be getting out of the penalty box only when the rolling number is 4
-
 }

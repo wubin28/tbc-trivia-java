@@ -52,8 +52,8 @@ public class Game {
             return;
         }
 
-        boolean isRollingNumberOdd = rollingNumber % 2 != 0;
-        if (isRollingNumberOdd) {
+        boolean isRollingNumberForGettingOutOfPenaltyBox = rollingNumber != 4;
+        if (isRollingNumberForGettingOutOfPenaltyBox) {
             players.get(currentPlayer).getOutOfPenaltyBox();
 
             logger.info(players.get(currentPlayer) + " is getting out of the penalty box");
